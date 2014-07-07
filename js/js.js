@@ -1,23 +1,28 @@
+var page=1;
 function prejdivpravo(strana)
 {
 	prejdihore(4);
 	document.getElementById("page"+strana).setAttribute("style","-webkit-transform:translateX(-100%);");
+	page=strana;
 }
 
 function prejdivlavo(strana)
 {
 	prejdihore(4);
 	document.getElementById("page"+strana).setAttribute("style","-webkit-transform:translateX(0px);");
+	page=1;
 }
 
 function prejdidole(strana)
 {
 	document.getElementById("page"+strana).setAttribute("style","-webkit-transform:translateY(-100%);");
+	page=4;
 }
 
 function prejdihore(strana)
 {
 	document.getElementById("page"+strana).setAttribute("style","-webkit-transform:translateY(0px);");
+	page=2;
 }
 
 var polickox=0;

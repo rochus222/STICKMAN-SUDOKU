@@ -14,12 +14,30 @@
             {
                   document.addEventListener("deviceready", onDeviceReady, true);
             }
-
+			
+			function onDeviceReady() {
+				// Register the event listener
+				document.addEventListener("backbutton", onBackKeyDown, false);
+			}
+			
             function exitFromApp()
              {
                 navigator.app.exitApp();
              }
 
+			 function onBackKeyDown()
+			 {
+				if(page==2 || page==3)prejdivlavo(page);
+				if(page==4)prejdihore(4);
+				if(page==1)ukonciappku();
+			 }
+			 function ukonciappku()
+			 {
+				var answer = confirm("Exit Sudoku?")
+				if (answer){
+					navigator.app.exitApp();
+				}
+			 }
         </script>
 	</head>
 	<body onload="onLoad();">
@@ -29,7 +47,7 @@
 			<a href="#" onClick="naplnhraciepole(0);"><button>NEW GAME</button></a><br />
 			<a href="#" onClick="pokracuj();"><button>CONTINUE</button></a><br />
 			<a href="#" onClick="prejdivpravo(3);"><button>HELP</button></a>
-			<a href="#" onClick="navigator.app.exitApp();"><button onClick="navigator.app.exitApp();">EXIT</button></a>
+			<a href="#" onClick="ukonciappku();"><button onClick="ukonciappku();">EXIT</button></a>
 			</div>
 			<div id="page2">
 				<div id="status">
