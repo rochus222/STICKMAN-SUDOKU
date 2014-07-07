@@ -8,8 +8,8 @@
 		<script src="phonegap.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="SHORTCUT ICON" href="favicon.ico" />
-		<script src="js/js.js"></script>
 		<script src="js/polia.js"></script>
+		<script src="js/js.js"></script>
 		<script type="text/javascript" charset="utf-8">
             function onLoad()
             {
@@ -28,7 +28,7 @@
 
 			 function onBackKeyDown()
 			 {
-				if(page==2 || page==3)prejdivlavo(page);
+				if(page==2 || page==3 || page==5)prejdivlavo(page);
 				else if(page==4)prejdihore(4);
 				else if(page==1)ukonciappku();
 			 }
@@ -44,17 +44,17 @@
 	<body onload="onLoad();">
 		<div id="screen" style="font-family: 'customfont'; ">
 			<div id="page1" style="text-align:center;">
-			<h1>SUDOKU</h1>
-			<a href="#" onClick="naplnhraciepole();"><button>NEW GAME</button></a><br />
-			<a href="#" onClick="pokracuj();"><button>CONTINUE</button></a><br />
-			<a href="#" onClick="prejdivpravo(3);"><button>HELP</button></a>
-			<button onClick="ukonciappku();">EXIT</button>
+				<h1>SUDOKU</h1>
+				<a href="#" onClick="prejdivpravo(5);"><button>NEW GAME</button></a><br />
+				<a href="#" onClick="pokracuj();"><button>CONTINUE</button></a><br />
+				<a href="#" onClick="prejdivpravo(3);"><button>HELP</button></a>
+				<button onClick="ukonciappku();">EXIT</button>
 			</div>
 			<div id="page2">
 				<div id="status">
 					<table width="100%" style="border:none; color:#000">
 						<tr style="border:none;">
-							<td class="ikonka" width="33%" style="border:none;"><a href="#" onClick="pausegame();prejdivlavo(2);"><img width="60%" src="img/left.png" /></div> </a></td>
+							<td class="ikonka" width="33%" style="border:none;"><a href="#" onClick="pausegame();prejdivlavo(2);"><img width="60%" src="img/left.png" /></a></td>
 							<td width="33%" align="center"><h1>Play</h1></td>
 							<td width="33%" align="center"></td>
 						</tr>
@@ -203,6 +203,21 @@
 						<td class="klavka" style="border:3px solid #000;" onClick="vyplnpolicko('0')">Clean</td>
 					</tr>
 				</table>
+			</div>
+			<div id="page5" style="text-align:center;">
+				<div id="status">
+					<table width="100%" style="border:none; color:#000">
+						<tr style="border:none;">
+							<td class="ikonka" width="33%" style="border:none;"><a href="#" onClick="prejdivlavo(5);"><img width="60%" src="img/left.png" /></a></td>
+							<td width="33%" align="center"><h1>Difficulty</h1></td>
+							<td width="33%" align="center"></td>
+						</tr>
+					</table>
+				</div>
+				<br />
+				<a href="#" onClick="naplnhraciepole(0);"><button>Easy</button></a><br />
+				<a href="#" onClick="naplnhraciepole(1);"><button>Medium</button></a><br />
+				<a href="#" onClick="naplnhraciepole(2);"><button>Hard</button></a>
 			</div>
 		</div>
 	</body>

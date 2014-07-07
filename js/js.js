@@ -116,7 +116,7 @@ function skontrolujkoniechry()
 	else return 1;
 }
 
-function naplnhraciepole()
+function naplnhraciepole(narocnost)
 {
 	pocetkrokov=0;
 	var date = new Date();
@@ -125,7 +125,9 @@ function naplnhraciepole()
 	cas=0
 	zmencas();
 	dlzkapola=hra_zadanie.length;
-	cislohry=Math.floor((Math.random() * 10000)%dlzkapola);
+	if(narocnost==0)cislohry=Math.floor((Math.random() * 10000)%easy);
+	if(narocnost==1)cislohry=Math.floor((Math.random() * 10000)%medium+easy);
+	if(narocnost==2)cislohry=Math.floor((Math.random() * 10000)%hard+easy+medium);
 	pole=cislohry;
 	for (var i; i<81; i++)hra_chyby[i]=0;
 	var pocitadlo = 0;
@@ -144,6 +146,7 @@ function naplnhraciepole()
 	}
 	zmenpocetkrokov();
 	prejdivpravo(2);
+	setTimeout(function () {prejdivlavo(5);},200);
 }
 
 function zmencas()
