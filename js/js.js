@@ -116,15 +116,17 @@ function skontrolujkoniechry()
 	else return 1;
 }
 
-function naplnhraciepole(pole)
+function naplnhraciepole()
 {
-	cislohry=pole;
 	pocetkrokov=0;
 	var date = new Date();
 	casinterval = date.getTime();
 	zapnutahra=1;
 	cas=0
 	zmencas();
+	dlzkapola=hra_zadanie.length;
+	cislohry=Math.floor((Math.random() * 10000)%dlzkapola);
+	pole=cislohry;
 	for (var i; i<81; i++)hra_chyby[i]=0;
 	var pocitadlo = 0;
 	for (var i=1; i<=9; i++){
