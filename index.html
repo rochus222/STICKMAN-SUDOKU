@@ -28,7 +28,9 @@
 
 			 function onBackKeyDown()
 			 {
-				if(page==2 || page==3 || page==5)prejdivlavo(page);
+				if(page==2)prejdivlavo(2);
+				else if(page==3)prejdivlavo(3);
+				else if(page==5)prejdivlavo(5);
 				else if(page==4)prejdihore(4);
 				else if(page==1)ukonciappku();
 			 }
@@ -215,9 +217,9 @@
 					</table>
 				</div>
 				<br />
-				<a href="#" onClick="naplnhraciepole(0);"><button>Easy</button></a><br />
+				<p align="center"><a href="#" onClick="naplnhraciepole(0);"><button>Easy</button></a><br />
 				<a href="#" onClick="naplnhraciepole(1);"><button>Medium</button></a><br />
-				<a href="#" onClick="naplnhraciepole(2);"><button>Hard</button></a>
+				<a href="#" onClick="naplnhraciepole(2);"><button>Hard</button></a></p>
 			</div>
 		</div>
 	</body>
