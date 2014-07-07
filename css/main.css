@@ -8,6 +8,7 @@ button
 }
 table.hraciepole, th.hraciepole, td.hraciepole {
    border: 1px solid black;
+   font-weight:bold;
 }
 td
 {
@@ -30,8 +31,8 @@ a{text-decoration:none; color:#333;}
             the location of your file `my_css.css` */ 
 }
 body {
+	
     font-family: "customfont";
-    font-size:30px;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -107,6 +108,12 @@ h3
 .klavka:hover, .hlavka:active
 {
 	background:#ccc;
+}
+
+.klavka
+{
+	font-weight:normal;
+	font-size:20px;
 }
 
 .ikonka:hover, .ikonka:active
