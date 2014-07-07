@@ -146,7 +146,7 @@ function naplnhraciepole(narocnost)
 	}
 	zmenpocetkrokov();
 	prejdivpravo(2);
-	setTimeout(function () {prejdivlavo(5);},200);
+	setTimeout(function () {prejdivlavo(5); page=2;},200);
 }
 
 function zmencas()
