@@ -10,7 +10,6 @@
 		<script src="js/js.js"></script>
 		<script src="js/polia.js"></script>
 		<script type="text/javascript" charset="utf-8">
-
             function onLoad()
             {
                   document.addEventListener("deviceready", onDeviceReady, true);
@@ -30,7 +29,7 @@
 			<a href="#" onClick="naplnhraciepole(0);"><button>NEW GAME</button></a><br />
 			<a href="#" onClick="pokracuj();"><button>CONTINUE</button></a><br />
 			<a href="#" onClick="prejdivpravo(3);"><button>HELP</button></a>
-			<a href="#" onClick="exitFromApp()"><button>EXIT</button></a>
+			<a href="#" onClick="navigator.app.exitApp();"><button onClick="navigator.app.exitApp();">EXIT</button></a>
 			</div>
 			<div id="page2">
 				<div id="status">
