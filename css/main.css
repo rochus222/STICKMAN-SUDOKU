@@ -5,6 +5,7 @@ button
 	padding:20px;
 	margin:3%;
 	font-family: "customfont";
+	font-size:30px;
 }
 table.hraciepole, th.hraciepole, td.hraciepole {
    border: 1px solid black;
@@ -31,7 +32,7 @@ a{text-decoration:none; color:#333;}
             the location of your file `my_css.css` */ 
 }
 body {
-	
+	font-size:40px;
     font-family: "customfont";
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
