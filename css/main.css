@@ -90,7 +90,7 @@ h3
 	background-color:#eee;
 	margin-left:-1px;
 	margin-top:200%;
-	-webkit-transition: 0.2s ease-in-out;
+	-webkit-transition: 0.05s ease-in-out;
 	border-top:5px solid #000;
 	z-index:300;
 }
