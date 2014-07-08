@@ -116,7 +116,7 @@ function skontrolujkoniechry()
 	else return 1;
 }
 
-function naplnhraciepole(narocnost)
+function naplnhraciepole(/*narocnost*/cislohry)
 {
 	pocetkrokov=0;
 	var date = new Date();
@@ -125,9 +125,9 @@ function naplnhraciepole(narocnost)
 	cas=0
 	zmencas();
 	dlzkapola=hra_zadanie.length;
-	if(narocnost==0)cislohry=Math.floor((Math.random() * 10000)%easy);
+	/*if(narocnost==0)cislohry=Math.floor((Math.random() * 10000)%easy);
 	if(narocnost==1)cislohry=Math.floor((Math.random() * 10000)%medium+easy);
-	if(narocnost==2)cislohry=Math.floor((Math.random() * 10000)%hard+easy+medium);
+	if(narocnost==2)cislohry=Math.floor((Math.random() * 10000)%hard+easy+medium);*/
 	pole=cislohry;
 	for (var i; i<81; i++)hra_chyby[i]=0;
 	var pocitadlo = 0;
@@ -146,7 +146,6 @@ function naplnhraciepole(narocnost)
 	}
 	zmenpocetkrokov();
 	prejdivpravo(2);
-	setTimeout(function () {prejdivlavo(5); page=2;},200);
 }
 
 function zmencas()
@@ -286,4 +285,29 @@ function skontrolujstarechyby()
 			}
 		}
 	}
+}
+
+function naplnvyber()
+{
+	var easystring="";
+	for(var i=0;i<easy;i++)
+	{
+		easystring=easystring+"<div class=\"vyberhry\" onClick=\"naplnhraciepole("+i+")\"><h1 style=\"display:inline;\">"+(i+1)+"</h1></div>";
+		if(i%3==0) easystring+"<hr>";
+	}
+	document.getElementById("easy").innerHTML=easystring;
+	var mediumstring="";
+	for(var i=0;i<medium;i++)
+	{
+		mediumstring=mediumstring+"<div class=\"vyberhry\" onClick=\"naplnhraciepole("+i+")\"><h1 style=\"display:inline;\">"+(i+1)+"</h1></div>";
+		if(i%3==0) mediumstring+"<hr>";
+	}
+	document.getElementById("medium").innerHTML=mediumstring;
+	var hardstring="";
+	for(var i=0;i<hard;i++)
+	{
+		hardstring=hardstring+"<div class=\"vyberhry\" onClick=\"naplnhraciepole("+i+")\"><h1 style=\"display:inline;\">"+(i+1)+"</h1></div>";
+		if(i%3==0) hardstring+"<hr>";
+	}
+	document.getElementById("hard").innerHTML=hardstring;
 }

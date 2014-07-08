@@ -13,7 +13,8 @@
 		<script type="text/javascript" charset="utf-8">
             function onLoad()
             {
-                  document.addEventListener("deviceready", onDeviceReady, true);
+				naplnvyber();
+                document.addEventListener("deviceready", onDeviceReady, true);
             }
 			
 			function onDeviceReady() {
@@ -28,9 +29,20 @@
 
 			 function onBackKeyDown()
 			 {
-				if(page==2)prejdivlavo(2);
+				if(page==2)
+				{
+					pausegame();
+					prejdivlavo(5);
+					prejdivlavo(6);
+					prejdivlavo(7);
+					prejdivlavo(8);
+					prejdivlavo(2);
+				}
 				else if(page==3)prejdivlavo(3);
 				else if(page==5)prejdivlavo(5);
+				else if(page==6)prejdivlavo(6);
+				else if(page==7)prejdivlavo(7);
+				else if(page==8)prejdivlavo(8);
 				else if(page==4)prejdihore(4);
 				else if(page==1)ukonciappku();
 			 }
@@ -45,18 +57,18 @@
 	</head>
 	<body onload="onLoad();">
 		<div id="screen" style="font-family: 'customfont';">
-			<div id="page1" style="text-align:center;">
+			<div id="page1" style="text-align:center;" class="page">
 				<br />
 				<a href="#" onClick="prejdivpravo(5);"><button>NEW GAME</button></a><br />
 				<a href="#" onClick="pokracuj();"><button>CONTINUE</button></a><br />
 				<a href="#" onClick="prejdivpravo(3);"><button>HELP</button></a>
 				<button onClick="ukonciappku();">EXIT</button>
 			</div>
-			<div id="page2">
+			<div id="page2" class="page">
 				<div id="status">
 					<table width="100%" style="border:none; color:#000">
 						<tr style="border:none;">
-							<td class="ikonka" width="33%" style="border:none;"><a href="#" onClick="pausegame();prejdivlavo(2);"><img width="60%" src="img/left.png" /></a></td>
+							<td class="ikonka" width="33%" style="border:none;"><a href="#" onClick="pausegame(); prejdivlavo(5); prejdivlavo(6); prejdivlavo(7); prejdivlavo(8);prejdivlavo(2);"><img width="60%" src="img/left.png" /></a></td>
 							<td width="33%" align="center"><h1>Play</h1></td>
 							<td width="33%" align="center"></td>
 						</tr>
@@ -170,7 +182,7 @@
 						</tr>
 					</table>
 			</div>
-			<div id="page3">
+			<div id="page3" class="page">
 				<div id="status">
 					<table width="100%" style="border:none; color:#000">
 						<tr style="border:none;">
@@ -206,7 +218,7 @@
 					</tr>
 				</table>
 			</div>
-			<div id="page5" style="text-align:center;">
+			<div id="page5" style="text-align:center;" class="page">
 				<div id="status">
 					<table width="100%" style="border:none; color:#000">
 						<tr style="border:none;">
@@ -217,9 +229,48 @@
 					</table>
 				</div>
 				<br />
-				<p align="center"><a href="#" onClick="naplnhraciepole(0);"><button>Easy</button></a><br />
-				<a href="#" onClick="naplnhraciepole(1);"><button>Medium</button></a><br />
-				<a href="#" onClick="naplnhraciepole(2);"><button>Hard</button></a></p>
+				<p align="center"><a href="#" onClick="prejdivpravo(6);"><button>Easy</button></a><br />
+				<a href="#" onClick="prejdivpravo(7);"><button>Medium</button></a><br />
+				<a href="#" onClick="prejdivpravo(8);"><button>Hard</button></a></p>
+			</div>
+			<div id="page6" style="text-align:center;" class="page">
+				<div id="status">
+					<table width="100%" style="border:none; color:#000">
+						<tr style="border:none;">
+							<td class="ikonka" width="33%" style="border:none;"><a href="#" onClick="prejdivlavo(6);"><img width="60%" src="img/left.png" /></a></td>
+							<td width="33%" align="center"><h1>Easy</h1></td>
+							<td width="33%" align="center"></td>
+						</tr>
+					</table>
+				</div>
+				<br />
+				<div id="easy"></div>
+			</div>
+			<div id="page7" style="text-align:center;" class="page">
+				<div id="status">
+					<table width="100%" style="border:none; color:#000">
+						<tr style="border:none;">
+							<td class="ikonka" width="33%" style="border:none;"><a href="#" onClick="prejdivlavo(7);"><img width="60%" src="img/left.png" /></a></td>
+							<td width="33%" align="center"><h1>Medium</h1></td>
+							<td width="33%" align="center"></td>
+						</tr>
+					</table>
+				</div>
+				<br />
+				<div id="medium"></div>
+			</div>
+			<div id="page8" style="text-align:center;" class="page">
+				<div id="status">
+					<table width="100%" style="border:none; color:#000">
+						<tr style="border:none;">
+							<td class="ikonka" width="33%" style="border:none;"><a href="#" onClick="prejdivlavo(8);"><img width="60%" src="img/left.png" /></a></td>
+							<td width="33%" align="center"><h1>Hard</h1></td>
+							<td width="33%" align="center"></td>
+						</tr>
+					</table>
+				</div>
+				<br />
+				<div id="hard"></div>
 			</div>
 		</div>
 	</body>
