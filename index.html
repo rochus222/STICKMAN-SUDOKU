@@ -13,6 +13,8 @@
 		<script type="text/javascript" charset="utf-8">
             function onLoad()
             {
+				pageHeight = document.getElementById('stranka').offsetHeight;
+				document.getElementById("page4").setAttribute("style","margin-top:"+pageHeight+"px;");
 				naplnvyber();
                 document.addEventListener("deviceready", onDeviceReady, true);
             }
@@ -67,7 +69,7 @@
 			 }
         </script>
 	</head>
-	<body onload="onLoad();">
+	<body onload="onLoad();" id="stranka">
 		<div id="screen" style="font-family: 'customfont';">
 			<div id="page1" style="text-align:center;" class="page">
 				<br />

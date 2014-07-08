@@ -1,27 +1,29 @@
 var page=1;
+var pageHeight;
 function prejdivpravo(strana)
 {
-	prejdihore(4);
+	document.getElementById("page4").setAttribute("style","margin-top:"+pageHeight+"px;");
 	document.getElementById("page"+strana).setAttribute("style","-webkit-transform:translateX(-100%);");
 	page=strana;
 }
 
 function prejdivlavo(strana)
 {
-	prejdihore(4);
+	document.getElementById("page4").setAttribute("style","margin-top:"+pageHeight+"px;");
 	document.getElementById("page"+strana).setAttribute("style","-webkit-transform:translateX(0px);");
 	page=1;
 }
 
 function prejdidole(strana)
 {
-	document.getElementById("page"+strana).setAttribute("style","-webkit-transform:translateY(-100%);");
+	var pageHeight = document.getElementById('stranka').offsetHeight;
+	document.getElementById("page"+strana).setAttribute("style","margin-top:"+(0.4*pageHeight)+"px;");
 	page=4;
 }
 
 function prejdihore(strana)
 {
-	document.getElementById("page"+strana).setAttribute("style","-webkit-transform:translateY(0px);");
+	document.getElementById("page"+strana).setAttribute("style","margin-top:"+pageHeight+"px;");
 	page=2;
 }
 
