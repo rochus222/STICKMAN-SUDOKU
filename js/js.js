@@ -17,13 +17,15 @@ function prejdivlavo(strana)
 function prejdidole(strana)
 {
 	var pageHeight = document.getElementById('stranka').offsetHeight;
-	document.getElementById("page"+strana).setAttribute("style","margin-top:"+(0.4*pageHeight)+"px;");
+	//document.getElementById("page"+strana).setAttribute("style","margin-top:"+(0.4*pageHeight)+"px;");
+	document.getElementById("page"+strana).setAttribute("style","-webkit-transform:translateY(-"+(0.6*pageHeight)+"px);");
 	page=4;
 }
 
 function prejdihore(strana)
 {
-	document.getElementById("page"+strana).setAttribute("style","margin-top:"+pageHeight+"px;");
+	//document.getElementById("page"+strana).setAttribute("style","margin-top:"+pageHeight+"px;");
+	document.getElementById("page"+strana).setAttribute("style","-webkit-transform:translateY(0px);");
 	page=2;
 }
 
