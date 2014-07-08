@@ -39,7 +39,6 @@ function vpisdopolicka(x,y)
 	var polickocislo=((x-1)*9+y-1);
 	if(hra_zadanie[cislohry][polickocislo]=='0')
 	{
-	
 		polickox=x;
 		polickoy=y;
 		prejdidole(4);
@@ -303,14 +302,14 @@ function naplnvyber()
 	var mediumstring="";
 	for(var i=0;i<medium;i++)
 	{
-		mediumstring=mediumstring+"<div class=\"vyberhry\" onClick=\"naplnhraciepole("+i+")\"><h1 style=\"display:inline;\">"+(i+1)+"</h1></div>";
+		mediumstring=mediumstring+"<div class=\"vyberhry\" onClick=\"naplnhraciepole("+(easy+i)+")\"><h1 style=\"display:inline;\">"+(i+1)+"</h1></div>";
 		if(i%3==0) mediumstring+"<hr>";
 	}
 	document.getElementById("medium").innerHTML=mediumstring;
 	var hardstring="";
 	for(var i=0;i<hard;i++)
 	{
-		hardstring=hardstring+"<div class=\"vyberhry\" onClick=\"naplnhraciepole("+i+")\"><h1 style=\"display:inline;\">"+(i+1)+"</h1></div>";
+		hardstring=hardstring+"<div class=\"vyberhry\" onClick=\"naplnhraciepole("+(easy+medium+i)+")\"><h1 style=\"display:inline;\">"+(i+1)+"</h1></div>";
 		if(i%3==0) hardstring+"<hr>";
 	}
 	document.getElementById("hard").innerHTML=hardstring;
