@@ -39,6 +39,7 @@ function vpisdopolicka(x,y)
 	var polickocislo=((x-1)*9+y-1);
 	if(hra_zadanie[cislohry][polickocislo]=='0')
 	{
+	
 		polickox=x;
 		polickoy=y;
 		prejdidole(4);
@@ -116,9 +117,11 @@ function skontrolujkoniechry()
 	else return 1;
 }
 
-function naplnhraciepole(/*narocnost*/cislohry)
+function naplnhraciepole(pom)
 {
+	cislohry=pom;
 	pocetkrokov=0;
+	document.getElementById('cont').innerHTML="<button onClick=\"pokracuj();\">CONTINUE</button>";
 	var date = new Date();
 	casinterval = date.getTime();
 	zapnutahra=1;
@@ -190,6 +193,7 @@ function pokracuj()
 	casinterval = date.getTime();
 	if(cislohry!=-1)prejdivpravo(2);
 	zmencas();
+	prejdivpravo(2);
 }
 
 function kontrolastvorca(x,y,cislo)
