@@ -40,9 +40,20 @@
 				}
 				else if(page==3)prejdivlavo(3);
 				else if(page==5)prejdivlavo(5);
-				else if(page==6)prejdivlavo(6);
-				else if(page==7)prejdivlavo(7);
-				else if(page==8)prejdivlavo(8);
+				else if(page==6)
+				{
+					page=5;
+					prejdivlavo(6);
+				}
+				else if(page==7){
+					page=5;
+					prejdivlavo(7);
+				}
+				else if(page==8)
+				{
+					page=5;
+					prejdivlavo(8);
+				}
 				else if(page==4)prejdihore(4);
 				else if(page==1)ukonciappku();
 			 }

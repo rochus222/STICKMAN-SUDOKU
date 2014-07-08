@@ -6,6 +6,7 @@ button
 	margin:3%;
 	font-family: "customfont";
 	font-size:40px;
+	border-radius:10px;
 }
 table.hraciepole, th.hraciepole, td.hraciepole {
    border: 1px solid black;
