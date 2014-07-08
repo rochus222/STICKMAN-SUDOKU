@@ -42,17 +42,18 @@
 				else if(page==5)prejdivlavo(5);
 				else if(page==6)
 				{
-					page=5;
 					prejdivlavo(6);
-				}
-				else if(page==7){
 					page=5;
+				}
+				else if(page==7)
+				{
 					prejdivlavo(7);
+					page=5;
 				}
 				else if(page==8)
 				{
-					page=5;
 					prejdivlavo(8);
+					page=5;
 				}
 				else if(page==4)prejdihore(4);
 				else if(page==1)ukonciappku();
@@ -248,7 +249,7 @@
 				<div id="status">
 					<table width="100%" style="border:none; color:#000">
 						<tr style="border:none;">
-							<td class="ikonka" width="33%" style="border:none;"><a href="#" onClick="prejdivlavo(6);"><img width="60%" src="img/left.png" /></a></td>
+							<td class="ikonka" width="33%" style="border:none;"><a href="#" onClick="prejdivlavo(6); page=5;"><img width="60%" src="img/left.png" /></a></td>
 							<td width="33%" align="center"><h1>Easy</h1></td>
 							<td width="33%" align="center"></td>
 						</tr>
@@ -261,7 +262,7 @@
 				<div id="status">
 					<table width="100%" style="border:none; color:#000">
 						<tr style="border:none;">
-							<td class="ikonka" width="33%" style="border:none;"><a href="#" onClick="prejdivlavo(7);"><img width="60%" src="img/left.png" /></a></td>
+							<td class="ikonka" width="33%" style="border:none;"><a href="#" onClick="prejdivlavo(7); page=5;"><img width="60%" src="img/left.png" /></a></td>
 							<td width="33%" align="center"><h1>Medium</h1></td>
 							<td width="33%" align="center"></td>
 						</tr>
@@ -274,7 +275,7 @@
 				<div id="status">
 					<table width="100%" style="border:none; color:#000">
 						<tr style="border:none;">
-							<td class="ikonka" width="33%" style="border:none;"><a href="#" onClick="prejdivlavo(8);"><img width="60%" src="img/left.png" /></a></td>
+							<td class="ikonka" width="33%" style="border:none;"><a href="#" onClick="prejdivlavo(8); page=5;"><img width="60%" src="img/left.png" /></a></td>
 							<td width="33%" align="center"><h1>Hard</h1></td>
 							<td width="33%" align="center"></td>
 						</tr>
