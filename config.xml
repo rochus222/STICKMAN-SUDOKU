@@ -17,5 +17,7 @@
     </author>
 	<preference name="orientation" value="portrait" />
 	<preference name="permissions" value="none" />
+	<preference name="fullscreen" value="true" />
+	<preference name="android-installLocation" value="auto" />
 	<icon src="img/icon.png" width="57" height="57" />
 </widget>
